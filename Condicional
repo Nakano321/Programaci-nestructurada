@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdio.h>
+
+int main()
+{
+   int x,op;
+   printf("escriba un n%cmero para x: ",163);
+   scanf("%d",&x);
+   printf("escriba una opci%cn, 1 = Positivo o negativo, 2 = par o impar.\n",162);
+   scanf("%d",&op);
+   switch(op)
+   {
+   case 1:
+        if(x > 0)
+            printf("Positivo \n");
+        else
+            printf("No positivo \n");
+    break;
+   case 2://otra acción
+        if(!(x % 2))
+            printf("X es par");
+        else
+            printf("X es impar");
+    break;
+   default:
+        printf("No se eligi%c nada",162);
+    return 0;
+   }
+
+}
+/* Edades if anidado
+ int edad;
+    printf("Escriba la edad: ");
+    scanf("%d",&edad);
+
+    if(edad >= 18)
+    {
+        if(edad > 65)
+        {
+            printf("Adulto mayor");
+        }
+        else
+        {
+            printf("Adulto");
+        }
+    }
+    else
+    {
+        printf("Menor de edad");
+    }
+    return 0; */
