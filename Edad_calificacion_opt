@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int cal,edad;
+    printf("Que edad tienes y cuanta calificaci%cn tienes en un rango 0-100?(separados por un espacio): ",162);
+    scanf("%d %d",&edad, &cal);
+    if(cal < 100 && cal > 0 && edad > 0)
+    {
+        if(edad >= 18)
+        {
+            if(cal >= 60)
+                printf("Aprobado Mayor de edad");
+            else
+                printf("Reprobado Mayor de edad");
+        }
+        else
+        {
+            if(cal < 60)
+                printf("Reprovado Menor de edad");
+            else
+                printf("Aprovado Menor de edad");
+        }
+    }
+    else
+    {
+        printf("Escribir valores correctos porfavor \n",160);
+    }
+    return 0;
+}
