@@ -49,15 +49,16 @@ void main()
         case 3:
             for(i=0;i<6;i++)
             {
-                printf("Modifique los goles del partido de las Chivas 1-6 %d =",i+1);
+                printf("Modifique los goles del partido de las Chivas 1-6\n %d =",i+1);
                 scanf("%d",&d[i]);
             }
             break;
         case 4:
             printf("Que # de valor especifico de las Chivas quieres modificar? 1-6 \n");
             scanf("%d",&mod);
+            printf("Ingrese el nuevo valor de la variable %d: ",mod);
             scanf("%d",&d[mod-1]);
-            printf("Nuevo valor de %d = %d",mod,d[mod-1]);
+            printf("Nuevo valor de %d = %d\n",mod,d[mod-1]);
             break;
         case 5:
             printf("Estadistico de partidos:\n");
