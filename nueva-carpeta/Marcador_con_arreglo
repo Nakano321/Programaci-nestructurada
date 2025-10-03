@@ -1,0 +1,86 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void main()
+{
+    float prom,prom1;
+    int i,b=0,b1=0,c=0,cont=0,op=0,d[6]={1,2,0,0,3,2},chiv=0,op1=0;
+    int mod=0,op2=1;
+            printf("-----Guardador de partidos pro max----- \n");
+    printf("Cuantos partidos quieres guardar? \n");
+    scanf("%d",&c);
+    int a[c];
+    printf("Registrar los Goles Personalizados: \n");
+     do{
+    for(i=0;i<=c-1;i++)
+    {
+        printf("Escriba los goles del partido %d =",i+1);
+        scanf("%d",&a[i]);
+    }
+    printf("Quieres cambiar los valores registrados? No=0 Si=1\n");
+    scanf("%d",&cont);
+    }while(cont!=0);
+      do{
+    printf("---Menu pasadote de longaniza--- \n1-Ver TODOS los resultados. \n2-Ver resultado de un partido especifico. \n3-Modificar todos los resultados de las Chivas. \n4-Modificar UN resultado especifico. \n5-Promedios. \n6-Salir. \n");
+    scanf("%d",&op1);
+
+    switch(op1)
+    {
+        case 1:
+            printf("------Resultados------\n");
+            for(i=0;i<=c-1;i++)
+            {
+                printf("El marcador del juego person %d es %d\n",i+1,a[i]);
+            }
+            printf("--Marcador de las Chivas--\n");
+            for(i=0;i<=6-1;i++)
+            {
+                printf("El marcador del juego #%d es %d\n",i+1,d[i]);
+            }
+            break;
+        case 2:
+            printf("Que Puntuacion de las chivas quieres ver? \n");
+                scanf("%d",&chiv);
+            printf("partido #%d, puntos = %d \n",chiv,d[chiv-1]);
+            printf("Que posicion person quieres ver? 1-%d opciones \n",c);
+                scanf("%d",&op);
+            printf("Partido #%d, puntuacion= %d \n",op,a[op-1]);
+            break;
+        case 3:
+            for(i=0;i<6;i++)
+            {
+                printf("Modifique los goles del partido de las Chivas 1-6 %d =",i+1);
+                scanf("%d",&d[i]);
+            }
+            break;
+        case 4:
+            printf("Que # de valor especifico de las Chivas quieres modificar? 1-6 \n");
+            scanf("%d",&mod);
+            scanf("%d",&d[mod-1]);
+            printf("Nuevo valor de %d = %d",mod,d[mod-1]);
+            break;
+        case 5:
+            printf("Estadistico de partidos:\n");
+            b = 0;
+            b1 = 0;
+            for(i = 0; i < c; i++)
+                b += a[i];
+            for(i = 0; i < 6; i++)
+                b1 += d[i];
+            prom=(float)b/c;
+            prom1=(float)b1/6;
+            printf("--Promedio de goles personalizados= %.2f--\n",prom);
+            printf("--Promedio de goles Chivas= %.2f--\n",prom1);
+            break;
+        case 6:
+            op2=0;
+            printf("Saliendo del sistema");
+            break;
+        default:
+            printf("Selecione un valor valido entre 1 y 6 porfavor.");
+    }
+    }while(op2!=0);
+
+
+
+}
