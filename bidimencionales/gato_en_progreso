@@ -1,0 +1,26 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+void main()
+{
+int G[3][3]={{00,01,02},
+            {10,11,12},
+            {20,21,22}};
+int i,j;
+    printf("hola %d \n",&G);
+    printf("hola %d \n",G[2][1]);
+for(i=0;i<3;i++)
+{
+    printf("\n");
+    for(j=0;j<3;j++)
+        printf("Posici%cn (%d,%d) = %d ",162,i,j,G[i][j]);
+}
+    printf("\n \n");
+for(i=0;i<3;i++)
+{
+    printf("\n");
+    for(j=0;j<3;j++)
+        printf("%d ",G[i][j]);
+}
+    printf("\n");
+}
