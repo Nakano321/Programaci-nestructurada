@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int tablero[6][6] = {
+	{0,0,0,1,0,0},
+	{0,1,0,0,0,0},
+	{0,0,0,0,1,0},
+	{0,0,0,1,0,0},
+	{0,0,0,1,0,0},
+	{0,0,0,1,0,0}};
+	
+	int fila,columna;
+	int seguir = 1;
+	
+	printf("===Buscaminas Basico===\n");
+	printf("Evita las bombas (1). Elige las posiciones seguras (0).\n");
+	while(seguir){
+		
+		printf("\nIngresa la fila (0-5)\n");
+			scanf("%d",&fila);
+		printf("Ingresa la columna (0-5)\n");
+			scanf("%d",&columna);
+		
+	if(fila < 0||fila > 5||columna < 0|| columna > 5){
+		printf("Coordenadas fuera del rango. Intenta de nuevo.\n");
+		continue;	
+	}
+	if(tablero[fila][columna] == 1){
+		printf("¡BOOM! Pisaste una bomba. Fin del juego prro.\n");
+		seguir = 0;
+	}else{
+		printf("Zona segura. Como eres afortunado");
+		}
+		}
+	
+return 0;
+}
