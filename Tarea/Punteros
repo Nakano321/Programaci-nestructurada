@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void cuadradoporValor(int n) {
+n = n*n;
+printf("[cuadradoporValor] n = %d\n",n);
+}
+
+void cuadradoporReferencia(int *n) {
+*n = (*n) * (*n);
+printf("[cuadradoporReferencia] n = %d\n", *n);
+}
+
+int main()
+{
+    int a = 3, b = 3;
+    printf("Antes de cuadradoporValor: a = %d\n",a);
+    cuadradoporValor(a);
+    printf("Despues de cuadradoporValor: a = %d\n\n",a);
+
+    printf("Antes de cuadradoporReferencia: b = %d\n",b);
+    cuadradoporReferencia(&b);
+    printf("Despues de cuadradoporReferencia: b = %d\n",b);
+
+    return 0;
+}
